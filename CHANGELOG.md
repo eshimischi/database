@@ -1,5 +1,66 @@
 # Changelog
 
+## [2.12.0](https://github.com/eshimischi/database/compare/v2.11.0...2.12.0) (2024-07-24)
+
+
+### Features
+
+* add INTERSECT and EXCEPT operators ([#204](https://github.com/eshimischi/database/issues/204)) ([b3cc5a3](https://github.com/eshimischi/database/commit/b3cc5a3b01c5771bfbe8950a8e8b1dba33f73da9))
+* Add support for the `NOT` operator in SQL queries. Add new methods `whereNot`, `andWhereNot`, and `orWhereNot` ([943437e](https://github.com/eshimischi/database/commit/943437ef745102b25f79acaf1fa3cefcc42c0a2b))
+* add the ability to specify the full name of the join type ([0fa0adf](https://github.com/eshimischi/database/commit/0fa0adf130def012273f1f2e69df3484100a8c62))
+
+
+### Bug Fixes
+
+* 53 ([ddec160](https://github.com/eshimischi/database/commit/ddec160362ea67ab11cb33b180b9921bfa15dff8))
+* add parameter consideration when hashing the query part with orderBy ([c874f7d](https://github.com/eshimischi/database/commit/c874f7d4548a190f0415b3a2c94cc9a3955e9cfa))
+* don't add a table prefix when column quoting ([#103](https://github.com/eshimischi/database/issues/103)) ([0fe0319](https://github.com/eshimischi/database/commit/0fe0319554c6ee473699cf3a47b00cc1121bdd6c))
+* Fix psalm type for DatabaseInterface::transaction() method ([#186](https://github.com/eshimischi/database/issues/186)) ([1f5b226](https://github.com/eshimischi/database/commit/1f5b226f6da26cd7c132f5ecc35a3fb37c396984))
+* interpolator includes microseconds into SQL result if it's configured ([#155](https://github.com/eshimischi/database/issues/155)) ([16047de](https://github.com/eshimischi/database/commit/16047de074f4c5f0cb1478daa1a8e04a84f5d508))
+* triggering changelog build ([4002820](https://github.com/eshimischi/database/commit/4002820fa99f88d96f27f533fda5b1d6e4836f67))
+
+
+### Documentation
+
+* add issue templates ([75086af](https://github.com/eshimischi/database/commit/75086af9abb974f15e7b942821413cdcbe627d55))
+* added security.md file ([17aefde](https://github.com/eshimischi/database/commit/17aefde4d5e8b69c49abaa31a07fe77644a1e31b))
+* move COC to .github directory ([08cadcb](https://github.com/eshimischi/database/commit/08cadcb4d6f88df71cb7260e3b9d1e950ce6294c))
+* removing failing ci issue template ([7200063](https://github.com/eshimischi/database/commit/7200063e0bd57e0ff4be009652d01da3606eb62a))
+* update CONTRIBUTING.md ([f6a9722](https://github.com/eshimischi/database/commit/f6a972200a8b1b8445b4583a9ac6239a8e74b630))
+* updating contribution guide ([ad3fbf0](https://github.com/eshimischi/database/commit/ad3fbf0a02a27435a9f8749ce18c47c858e1d25e))
+
+
+### Styles
+
+* apply yamllint ([0506fb1](https://github.com/eshimischi/database/commit/0506fb100823042bc45d90b3507a781eb3225449))
+
+
+### Dependencies
+
+* **composer:** added ergebnis/composer-normalize ([1dddad4](https://github.com/eshimischi/database/commit/1dddad4181758e2b41151e1bdafe932b51249bc7))
+
+
+### Tests
+
+* add tests using fragments in orderBy ([239b061](https://github.com/eshimischi/database/commit/239b0616ad72d5b3a9785bba48a456484b1bde8d))
+* fix tests ([56edfd4](https://github.com/eshimischi/database/commit/56edfd41dcd5c07d34504e1e835392bbe12e7006))
+
+
+### Continuous Integration
+
+* add cycle/gh-actions ([2507324](https://github.com/eshimischi/database/commit/2507324f819ad25eac86e7fb40df54c07276c91d))
+* add default CODEOWNERS file ([c080e0c](https://github.com/eshimischi/database/commit/c080e0c7d7721533fb77ca9f710677ee1155fdf4))
+* added coding-standards initial CI job ([9725b49](https://github.com/eshimischi/database/commit/9725b49edb0a4e87b0345e5fedae91cdfef5fa59))
+* auto apply labels based on files and branches ([86971f0](https://github.com/eshimischi/database/commit/86971f0d08d49c5633958ca5b89158d588a228d6))
+* automate changelog and release management ([#2](https://github.com/eshimischi/database/issues/2)) ([10bd18e](https://github.com/eshimischi/database/commit/10bd18e116f8345ca8d34fc280f5692abd18c531))
+* do not include v prefix in tag ([d9587c3](https://github.com/eshimischi/database/commit/d9587c3f5f536c22e08f654b6332118995865eae))
+* fixes in commit linting ([ca925bd](https://github.com/eshimischi/database/commit/ca925bdd36870f5dceff61eebfa3be62258fb2fe))
+* push composer.lock to enable cache locks ([726a0fe](https://github.com/eshimischi/database/commit/726a0fea90dc6c97b3091e801eaf8d4f3967cf06))
+* switch to auto changelog ([#3](https://github.com/eshimischi/database/issues/3)) ([bed846b](https://github.com/eshimischi/database/commit/bed846b7afba7fc18390d2256814884504eaaf09))
+* switch to github changelog type ([8275f0c](https://github.com/eshimischi/database/commit/8275f0c03d814a57ed2d4ce55f696b3612c74eca))
+* use actions/labeler directly ([a9fa3b8](https://github.com/eshimischi/database/commit/a9fa3b808105b22513bc7a9d71e8fbd5865c3a16))
+* use fixed versions for actions instead of master ([bd4d708](https://github.com/eshimischi/database/commit/bd4d7088ab410830dec0d34a3858af620e9672b2))
+
 ## [2.11.0](https://github.com/cycle/database/compare/2.10.0...2.11.0) (2024-06-11)
 
 
