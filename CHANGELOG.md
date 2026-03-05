@@ -1,5 +1,106 @@
 # Changelog
 
+## [2.16.0](https://github.com/eshimischi/database/compare/v2.15.2...2.16.0) (2026-03-05)
+
+
+### Features
+
+* add `getComment()` method annotation into `ColumnInterface` ([02c4962](https://github.com/eshimischi/database/commit/02c4962f8b2782a8273571ed50d50e1281f3f93c))
+* add `snowflake` column type alias ([#235](https://github.com/eshimischi/database/issues/235)) ([49a90c7](https://github.com/eshimischi/database/commit/49a90c7062c90f44e5e072d90f14a5a472643e8a))
+* Add getComment() method to `AbstractColumn` ([9e780d8](https://github.com/eshimischi/database/commit/9e780d8899d981778b4152757d39504029a54fcc))
+* add INTERSECT and EXCEPT operators ([#204](https://github.com/eshimischi/database/issues/204)) ([b3cc5a3](https://github.com/eshimischi/database/commit/b3cc5a3b01c5771bfbe8950a8e8b1dba33f73da9))
+* add parameters to SubQuery ([74dbd7c](https://github.com/eshimischi/database/commit/74dbd7c11dc8812f54d4145c0fb3d6c07693d829))
+* add public `Driver::clearCache()` method ([3cc2757](https://github.com/eshimischi/database/commit/3cc2757e70aea7a65afdd80495649e1422a144a6))
+* add SubQuery injection ([8079759](https://github.com/eshimischi/database/commit/80797599e1d3aff28c76e69904748df0e7d6407b))
+* Add support for the `NOT` operator in SQL queries. Add new methods `whereNot`, `andWhereNot`, and `orWhereNot` ([943437e](https://github.com/eshimischi/database/commit/943437ef745102b25f79acaf1fa3cefcc42c0a2b))
+* add the ability to specify the full name of the join type ([0fa0adf](https://github.com/eshimischi/database/commit/0fa0adf130def012273f1f2e69df3484100a8c62))
+* add ULID column type ([#233](https://github.com/eshimischi/database/issues/233)) ([f8b3a87](https://github.com/eshimischi/database/commit/f8b3a87222aa94a7ebd9e5776bc61897ad10237e))
+* **MySQL:** add `first` and `after` into column declaration ([#226](https://github.com/eshimischi/database/issues/226)) ([7ad2df1](https://github.com/eshimischi/database/commit/7ad2df1ccf4498ac1a5067a0abc8ded55c6d06cd))
+* postgres array type detection ([bb762bb](https://github.com/eshimischi/database/commit/bb762bbb46622e93f5bb13316771e38af2088cda))
+* Reconnect on MySQL disconnected by inactivity ([3f776ab](https://github.com/eshimischi/database/commit/3f776ab97f0b7d64c5fd9d1f65474c37e78e17b3))
+
+
+### Bug Fixes
+
+* 53 ([ddec160](https://github.com/eshimischi/database/commit/ddec160362ea67ab11cb33b180b9921bfa15dff8))
+* add parameter consideration when hashing the query part with orderBy ([c874f7d](https://github.com/eshimischi/database/commit/c874f7d4548a190f0415b3a2c94cc9a3955e9cfa))
+* correct condition check for named parameters in Interpolator ([#238](https://github.com/eshimischi/database/issues/238)) ([283709e](https://github.com/eshimischi/database/commit/283709e7f7d6cba4c2a144744be261d0abb9f7d0))
+* don't add a table prefix when column quoting ([#103](https://github.com/eshimischi/database/issues/103)) ([0fe0319](https://github.com/eshimischi/database/commit/0fe0319554c6ee473699cf3a47b00cc1121bdd6c))
+* Fix psalm type for DatabaseInterface::transaction() method ([#186](https://github.com/eshimischi/database/issues/186)) ([1f5b226](https://github.com/eshimischi/database/commit/1f5b226f6da26cd7c132f5ecc35a3fb37c396984))
+* improve compatibility with PHP 8.4 ([#214](https://github.com/eshimischi/database/issues/214)) ([a6b860e](https://github.com/eshimischi/database/commit/a6b860e55c4e1f5812d9d176e659abeb0b4370cc))
+* interpolator includes microseconds into SQL result if it's configured ([#155](https://github.com/eshimischi/database/issues/155)) ([16047de](https://github.com/eshimischi/database/commit/16047de074f4c5f0cb1478daa1a8e04a84f5d508))
+* **MySQL:** unsigned boolean Columns comparison ([#234](https://github.com/eshimischi/database/issues/234)) ([82378ea](https://github.com/eshimischi/database/commit/82378ea94653eaf0b558149e86b7a6ebec94872e))
+* Replace deprecated MySQL constant with scalar ([#237](https://github.com/eshimischi/database/issues/237)) ([b1a9cd7](https://github.com/eshimischi/database/commit/b1a9cd777c13a15b59d8d2ca90e3095a1b2e4720))
+* triggering changelog build ([4002820](https://github.com/eshimischi/database/commit/4002820fa99f88d96f27f533fda5b1d6e4836f67))
+* typecasting of an integer to a boolean in SQLite ([32c29c7](https://github.com/eshimischi/database/commit/32c29c760ca30735b4d0f36b8ad11af9bb470997))
+
+
+### Documentation
+
+* add issue templates ([75086af](https://github.com/eshimischi/database/commit/75086af9abb974f15e7b942821413cdcbe627d55))
+* added security.md file ([17aefde](https://github.com/eshimischi/database/commit/17aefde4d5e8b69c49abaa31a07fe77644a1e31b))
+* cover SubQuery with comments ([8579419](https://github.com/eshimischi/database/commit/85794199f02e4d2f60f8f66de21f18e7968aafc5))
+* move COC to .github directory ([08cadcb](https://github.com/eshimischi/database/commit/08cadcb4d6f88df71cb7260e3b9d1e950ce6294c))
+* removing failing ci issue template ([7200063](https://github.com/eshimischi/database/commit/7200063e0bd57e0ff4be009652d01da3606eb62a))
+* update CONTRIBUTING.md ([f6a9722](https://github.com/eshimischi/database/commit/f6a972200a8b1b8445b4583a9ac6239a8e74b630))
+* updating contribution guide ([ad3fbf0](https://github.com/eshimischi/database/commit/ad3fbf0a02a27435a9f8749ce18c47c858e1d25e))
+
+
+### Styles
+
+* apply Code Style to tests ([02c2437](https://github.com/eshimischi/database/commit/02c24376022c6b131df082b947a9dfdc5d12cbc0))
+* apply new code style ([89a7c57](https://github.com/eshimischi/database/commit/89a7c574c5fe6538541065cf579defacf100c246))
+* apply yamllint ([0506fb1](https://github.com/eshimischi/database/commit/0506fb100823042bc45d90b3507a781eb3225449))
+* fix code style; rename `SubQueryInjection` to `SubQuery` ([b9cf08e](https://github.com/eshimischi/database/commit/b9cf08e1ca3911ee4cb3aab513f597988221b3eb))
+* improve code formatting and consistency in Compiler, Jsoner, and SubQuery ([02484a6](https://github.com/eshimischi/database/commit/02484a66a23bac5f2fe3711944890642f0a4a7a2))
+* **php-cs-fixer:** fix coding standards ([3822f76](https://github.com/eshimischi/database/commit/3822f7624d6d531b112fd4e5cf5d7f338fa6cb40))
+* **php-cs-fixer:** fix coding standards ([1eae6db](https://github.com/eshimischi/database/commit/1eae6dbfa5cf7d27107daded67d9fae03ab70b28))
+
+
+### Dependencies
+
+* **composer:** added ergebnis/composer-normalize ([1dddad4](https://github.com/eshimischi/database/commit/1dddad4181758e2b41151e1bdafe932b51249bc7))
+
+
+### Code Refactoring
+
+* rename `selectSubQuery` to `subQuery` and update related query logic ([727ca0e](https://github.com/eshimischi/database/commit/727ca0edccd01cb0ba1133240712c65775cc6bd1))
+
+
+### Tests
+
+* add tests using fragments in orderBy ([239b061](https://github.com/eshimischi/database/commit/239b0616ad72d5b3a9785bba48a456484b1bde8d))
+* enhance subquery tests with additional conditions and parameters ([09013c6](https://github.com/eshimischi/database/commit/09013c670cadcd865529b7c39578db2413001631))
+* fix tests ([56edfd4](https://github.com/eshimischi/database/commit/56edfd41dcd5c07d34504e1e835392bbe12e7006))
+* **MySQL:** Added a test case proving bug with boolean columns ([c2c05d1](https://github.com/eshimischi/database/commit/c2c05d191d5c4379fb9be58599012158ea3b9db6))
+* **MySQL:** enhance boolean column configuration tests with zerofill and nullable checks ([0129e7f](https://github.com/eshimischi/database/commit/0129e7f0c49e2cefb7d986b0ad0d311bdcdf7738))
+* update MSSQL config ([14ec20e](https://github.com/eshimischi/database/commit/14ec20eb807888476c91775fb87f5ac11b141555))
+
+
+### Continuous Integration
+
+* add cycle/gh-actions ([2507324](https://github.com/eshimischi/database/commit/2507324f819ad25eac86e7fb40df54c07276c91d))
+* add default CODEOWNERS file ([c080e0c](https://github.com/eshimischi/database/commit/c080e0c7d7721533fb77ca9f710677ee1155fdf4))
+* add ODBC driver to tests with codecov ([7dfd98e](https://github.com/eshimischi/database/commit/7dfd98e9cb166dc2dbd98907ad26e03845ee608f))
+* add Spiral CS fixer ([a72e1ae](https://github.com/eshimischi/database/commit/a72e1ae687eab6d4a3ec97f5fa7f58369d771227))
+* added coding-standards initial CI job ([9725b49](https://github.com/eshimischi/database/commit/9725b49edb0a4e87b0345e5fedae91cdfef5fa59))
+* auto apply labels based on files and branches ([86971f0](https://github.com/eshimischi/database/commit/86971f0d08d49c5633958ca5b89158d588a228d6))
+* automate changelog and release management ([#2](https://github.com/eshimischi/database/issues/2)) ([10bd18e](https://github.com/eshimischi/database/commit/10bd18e116f8345ca8d34fc280f5692abd18c531))
+* do not include v prefix in tag ([d9587c3](https://github.com/eshimischi/database/commit/d9587c3f5f536c22e08f654b6332118995865eae))
+* fix MSSQL initialization in CI ([678c049](https://github.com/eshimischi/database/commit/678c04970760f5be76e13dde9f84dd85d4465e37))
+* fixes in commit linting ([ca925bd](https://github.com/eshimischi/database/commit/ca925bdd36870f5dceff61eebfa3be62258fb2fe))
+* normalize DB passwords in tests; fix style in cs-fix workflow ([b514009](https://github.com/eshimischi/database/commit/b514009e28adf149cc816e9f9b527e92b653ff73))
+* push composer.lock to enable cache locks ([726a0fe](https://github.com/eshimischi/database/commit/726a0fea90dc6c97b3091e801eaf8d4f3967cf06))
+* replace `docker-compose` with `docker compose` ([914ed58](https://github.com/eshimischi/database/commit/914ed5837966fd11ee5a559f3e9b9564eaeb06f3))
+* switch to auto changelog ([#3](https://github.com/eshimischi/database/issues/3)) ([bed846b](https://github.com/eshimischi/database/commit/bed846b7afba7fc18390d2256814884504eaaf09))
+* switch to github changelog type ([8275f0c](https://github.com/eshimischi/database/commit/8275f0c03d814a57ed2d4ce55f696b3612c74eca))
+* update workflow actions ([d55b36f](https://github.com/eshimischi/database/commit/d55b36fb538565f88efeb2abd280ead26e4ef025))
+* use actions/labeler directly ([a9fa3b8](https://github.com/eshimischi/database/commit/a9fa3b808105b22513bc7a9d71e8fbd5865c3a16))
+* use common MSSQL workflow ([5c434ec](https://github.com/eshimischi/database/commit/5c434ec9cb844e0569076f6bb1211e43c587f69d))
+* use common MySQL workflow ([c5aa164](https://github.com/eshimischi/database/commit/c5aa1646911e99db51b9ec3aa1fb8e36087fb29d))
+* use common Postgres workflow ([8c17e52](https://github.com/eshimischi/database/commit/8c17e520c84163572ffd1adb394d53558c86cc92))
+* use fixed versions for actions instead of master ([bd4d708](https://github.com/eshimischi/database/commit/bd4d7088ab410830dec0d34a3858af620e9672b2))
+
 ## [2.15.2](https://github.com/cycle/database/compare/2.15.1...2.15.2) (2026-02-16)
 
 
